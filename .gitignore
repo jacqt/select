@@ -27,4 +27,3 @@ lib
 coverage
 .vscode
 yarn.lock
-es/

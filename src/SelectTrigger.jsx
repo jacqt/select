@@ -55,7 +55,7 @@ export default class SelectTrigger extends React.Component {
           dropdownDOMNode.style[widthProp] = `${ReactDOM.findDOMNode(this)
             .offsetWidth}px`;
         }
-      }, 200)
+      }, 200);
     }
   }
 
