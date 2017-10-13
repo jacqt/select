@@ -48,12 +48,14 @@ export default class SelectTrigger extends React.Component {
   componentDidUpdate() {
     const { visible, dropdownMatchSelectWidth } = this.props;
     if (visible) {
-      const dropdownDOMNode = this.getPopupDOMNode();
-      if (dropdownDOMNode) {
-        const widthProp = dropdownMatchSelectWidth ? 'width' : 'minWidth';
-        dropdownDOMNode.style[widthProp] = `${ReactDOM.findDOMNode(this)
-          .offsetWidth}px`;
-      }
+      setTimeout(() => {
+        const dropdownDOMNode = this.getPopupDOMNode();
+        if (dropdownDOMNode) {
+          const widthProp = dropdownMatchSelectWidth ? 'width' : 'minWidth';
+          dropdownDOMNode.style[widthProp] = `${ReactDOM.findDOMNode(this)
+            .offsetWidth}px`;
+        }
+      }, 200)
     }
   }
 
